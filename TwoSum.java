@@ -4,7 +4,7 @@ import java.util.Map;
 public class TwoSum {
     public static void main(String args[]){
         int[] lista = {1,2,3,4,5};
-        int alvo = 5;
+        int alvo = 4;
         int[] result = twoSum(lista, alvo);
         System.out.println("Indices dos elementos cuja soma é igual a " + alvo + ": " + result[1] + ", " + result[0]);
     }
