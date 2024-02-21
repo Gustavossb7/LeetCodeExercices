@@ -13,18 +13,18 @@ public class RomanToInteger {
         romanMap.put('M', 1000);
 
         int result = 0;
-
         for(int i = 0; i<s.length(); i++){
-            if(i>0 && romanMap.get(s.charAt(i))>romanMap.get(s.charAt(i-1))){
-                result += romanMap.get(s.charAt(i)) - 2*romanMap.get(s.charAt(i-1));
-            }
-            else{
+            if(i>0 && romanMap.get(s.charAt(i)) > romanMap.get(s.charAt(i-1))){   //Verifica se o digito anterior é menor que o atual (se sim, isso será uma subtração)
+                result += romanMap.get(s.charAt(i)) - 2*romanMap.get(s.charAt(i-1));    //Realiza uma subtração, multiplicada por 2 para corrigir esse digito que foi adicionado na última alteração  
+            } else{
                 result += romanMap.get(s.charAt(i));
             }
         }
         return result;
 
     }
+
+
 
     public static void main(String[] args) {
         RomanToInteger converter = new RomanToInteger();
